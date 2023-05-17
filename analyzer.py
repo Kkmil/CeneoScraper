@@ -23,7 +23,17 @@ stars.plot.bar()
 plt.show()
 #dodatkowe punkty: 1. drugi wwykrkes kołowy dla ilu opinii jest polecam dla ilu nie polecam i dla ilu none drop an a do value counts nie pomija none??
 #zapis do pliku katalog plots i zapisywac je brak indeksowania w repo
-
+#recommendations = opinions.recommendation.value_counts(dropna=False).reindex([True,False,np.nan], fill_value=0)
+'''print(recommendations)
+recommendations.plot.pie(
+    label="",
+    labels = ["recommended", "Not recommended", "None"],
+    colors = ["green", "red","gray"],
+    autopct = lambda p: '{:.1f}%'.format(round(p)) if p > 0 else ''
+)
+plt.title("Recommendations")
+plt.savefig(f"./charts/{product_code}_pie.svg")
+plt.close()
 
 
 print(f"""Dla produktu o kodzie {product_code}
