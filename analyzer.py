@@ -39,6 +39,8 @@ recommendations = opinions.recommendation.value_counts(dropna=False)
 print(recommendations)
 recommendations.plot.pie(
     label="",
+    labels = ["Recommended", "Not-recommended", "Neutral"],
+    colors = ["limegreen", "red","navy"],
     autopct="%1.1f%%",
 )
 plt.title("Recommendations")
